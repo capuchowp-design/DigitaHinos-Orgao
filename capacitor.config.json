@@ -1,0 +1,9 @@
+{
+  "appId": "io.github.capuchowp.organum",
+  "appName": "Organum",
+  "webDir": "www",
+  "backgroundColor": "#0a0a0f",
+  "server": {
+    "androidScheme": "https"
+  }
+}

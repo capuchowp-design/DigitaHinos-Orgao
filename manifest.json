@@ -1,6 +1,6 @@
 {
-  "name": "Organum - Hinos para órgão com dedilhado",
-  "short_name": "Organum",
+  "name": "DigitaHinos Órgão - Hinos para órgão com dedilhado",
+  "short_name": "DigitaHinos Órgão",
   "description": "Hinos para órgão com as quatro vozes da partitura e indicação de dedos para cada mão",
   "start_url": "./index.html",
   "display": "standalone",

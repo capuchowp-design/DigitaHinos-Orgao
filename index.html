@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Organum – Hinos para órgão com dedilhado</title>
+    <title>DigitaHinos Órgão - Hinos para órgão com dedilhado</title>
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -465,7 +465,7 @@
             <rect x="24" y="12" width="4" height="12" rx="1" fill="#fff" opacity="0.6"/>
             <defs><linearGradient id="lg" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#b4472f"/><stop offset="1" stop-color="#e0b455"/></linearGradient></defs>
         </svg>
-        <span class="logo-name">Organum</span>
+        <span class="logo-name">DigitaHinos Órgão</span>
         <span class="note-count-badge" id="noteCountBadge" style="display:none">0 notas</span>
     </div>
     <div class="header-right">
@@ -502,7 +502,7 @@
                     <rect x="18" y="58" width="9" height="34" rx="3" fill="#e0b455"/><ellipse cx="22.5" cy="67" rx="2.6" ry="1.6" fill="#2a1a11"/><rect x="31" y="46" width="9" height="46" rx="3" fill="#d29a45"/><ellipse cx="35.5" cy="55" rx="2.6" ry="1.6" fill="#2a1a11"/><rect x="44" y="34" width="9" height="58" rx="3" fill="#e8c36a"/><ellipse cx="48.5" cy="43" rx="2.6" ry="1.6" fill="#2a1a11"/><rect x="57" y="42" width="9" height="50" rx="3" fill="#c98a3c"/><ellipse cx="61.5" cy="51" rx="2.6" ry="1.6" fill="#2a1a11"/><rect x="70" y="28" width="9" height="64" rx="3" fill="#e0b455"/><ellipse cx="74.5" cy="37" rx="2.6" ry="1.6" fill="#2a1a11"/><rect x="83" y="40" width="9" height="52" rx="3" fill="#d29a45"/><ellipse cx="87.5" cy="49" rx="2.6" ry="1.6" fill="#2a1a11"/><rect x="96" y="52" width="9" height="40" rx="3" fill="#c98a3c"/><ellipse cx="100.5" cy="61" rx="2.6" ry="1.6" fill="#2a1a11"/>
                     <defs><linearGradient id="wg" x1="0" y1="0" x2="120" y2="120"><stop stop-color="#b4472f"/><stop offset="1" stop-color="#e0b455"/></linearGradient></defs>
                 </svg>
-                <h1>Organum</h1>
+                <h1>DigitaHinos Órgão</h1>
                 <p>Escolha um hino em 🎵 Hinos ou carregue uma partitura MusicXML (.mxl / .xml): as quatro vozes tocam no órgão e cada nota mostra o dedo ideal</p>
                 <div class="welcome-btns">
                     <label class="welcome-upload" for="welcomeFileInput">Carregar MIDI / MXL
@@ -825,7 +825,7 @@
 
 <div class="pb-modal" id="mPro" hidden>
   <div class="pb-sheet">
-    <div class="pb-head"><h2>⭐ Organum Pro</h2><button class="pb-x" data-close>✕</button></div>
+    <div class="pb-head"><h2>⭐ DigitaHinos Órgão Pro</h2><button class="pb-x" data-close>✕</button></div>
     <div class="pb-body">
       <div id="proWhy" class="pb-fine" style="margin:0 0 10px;font-weight:600;color:var(--text-main)"></div>
       <ul class="pro-feats">
@@ -3467,7 +3467,7 @@ function pbBuildScore(opts){
     });
     const total_pages=svgs.length;
     if(!dyn) svgs.forEach((s,i)=>pbEl(s,'text',{x:W/2,y:H-26,'text-anchor':'middle','font-family':'Arial,Helvetica,sans-serif','font-size':11,fill:'#888'},(i+1)+' / '+total_pages));
-    if(!dyn) pbEl(svgs[0],'text',{x:W-MX,y:108,'text-anchor':'end','font-family':'Arial,Helvetica,sans-serif','font-size':11,fill:'#888'},ts+'  ·  Organum');
+    if(!dyn) pbEl(svgs[0],'text',{x:W-MX,y:108,'text-anchor':'end','font-family':'Arial,Helvetica,sans-serif','font-size':11,fill:'#888'},ts+'  ·  DigitaHinos Órgão');
 
     /* ---------- desenho ---------- */
     const INK='#111', HRX=SP*0.66, HRY=SP*0.46;
@@ -3898,7 +3898,7 @@ async function refreshFolder(){
         }
     }catch(e){ ul.append(emptyLi('Não foi possível ler a pasta')); return; }
     items.sort((a,b)=>b.mod-a.mod);
-    if(!items.length){ ul.append(emptyLi('Nenhum projeto do Organum nesta pasta ainda')); return; }
+    if(!items.length){ ul.append(emptyLi('Nenhum projeto do DigitaHinos Órgão nesta pasta ainda')); return; }
     items.forEach(it=>ul.append(projLi(it.name.slice(0,-FOLDER_EXT.length),fmtDate(it.mod)+' · '+Math.max(1,Math.round(it.size/1024))+' KB',
         async()=>{ try{ const f=await it.h.getFile(); const d=JSON.parse(await f.text()); apply(d);
                 projName=it.name.slice(0,-FOLDER_EXT.length); current={kind:'folder',file:it.name}; updateName(); $('projNameIn').value=projName; closeModals(); say('Projeto aberto da pasta',true); }
